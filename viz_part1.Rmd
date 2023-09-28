@@ -6,6 +6,12 @@ output: github_document
 ```{r}
 library(tidyverse)
 library(ggridges)
+
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
 ```
 
 ```{r}
@@ -151,5 +157,9 @@ ggp_weather =
 ggp_weather
 
 ggsave("plots/ggp_weather.pdf", ggp_weather)
+```
+
+```{r, fig.width = 6, fig.height = 0.6}
+ggp_weather
 ```
 
