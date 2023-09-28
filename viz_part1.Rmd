@@ -140,3 +140,16 @@ ggplot(weather_df, aes(x = tmax, y = name)) +
   geom_density_ridges()
 ```
 
+## saving and embedding plots
+
+```{r}
+ggp_weather =
+  weather_df |>
+  ggplot(aes(x = tmin, y = tmax)) +
+  geom_point()
+
+ggp_weather
+
+ggsave("plots/ggp_weather.pdf", ggp_weather)
+```
+
